@@ -1,0 +1,35 @@
+            CREATING DATASE
+
+DROP DATABASE longtest;
+-- if you want to delete database
+CREATE DATABASE MLongtest;
+-- creating new database
+USE MLongtest;
+-- selecting database to use in creating table
+
+
+CREATE TABLE student(
+    -- 'student' as the table name
+   StudNo varchar(50) PRIMARY KEY,
+    StudFName varchar(50),
+    StudLName varchar(50),
+    Major enum('ECE','COE'),
+    Gender enum('F','M'),
+    HomeAddress varchar(55)
+    );
+
+    -- 'StudNo' is a PRIMARY KEY in the table 'student'
+CREATE TABLE subject(
+     -- 'subject' as the table name
+    SubjectCode enum('Chem 123','Math 122','Math 123') PRIMARY KEY,
+    SubjectDescr enum('Chemistry','Trigonometry','Algebra')
+    );
+    
+CREATE TABLE grade(
+     -- 'grade' as the table name
+    StudNo varchar(50),
+    SubjectCode enum('Chem 123', 'Math 122','Math 123'),
+    Grade double,
+    CONSTRAINT gradeFK FOREIGN KEY(StudNo) REFERENCES student(StudNo), FOREIGN KEY(SubjectCode) REFERENCES subject(SubjectCode)
+    -- 'CONSTRAINT' 'table name + FK as Foreign Key' 'FOREIGN KEY( primary key table name) REFERENCES 'primary key table name' (Primary Key)
+    );
