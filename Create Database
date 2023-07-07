@@ -1,6 +1,6 @@
             CREATING DATASE
 
-DROP DATABASE longtest;
+DROP DATABASE MLongtest;
 -- if you want to delete database
 CREATE DATABASE MLongtest;
 -- creating new database

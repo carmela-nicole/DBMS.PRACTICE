@@ -1,0 +1,49 @@
+                    Inserting Columns           
+
+Two ways of Inserting Columns
+
+INSERT INTO Student VALUES
+-- if filling up all the columns
+
+INSERT INTO Student (StudFName)
+-- INSERT INTO Student " Columns Name" (StudFName "Table Name")
+-- if you are inserting values in a specific table
+
+
+INSERT INTO Student VALUES
+-- Table Names ('StudNo', 'StudFName', 'StudLName', 'Major', 'Gender', 'HomeAddress')
+('S-101',"Ana", "Cruz", "ECE", 'F',"Malolos, Bulacan"),
+('S-102', "Hazel","Ponce","COE", 'F', "Plaridel, Bulacan"),
+('S-103', "Cristov","Concio","ECE", 'M', "Malolos, Bulacan"),
+('S-104', "Aris","Clavio","COE", 'M', "Pulilan, Bulacan"),
+('S-105', "Honey","Pelayo","COE", 'F', "Plaridel, Bulacan"),
+('S-106', "Carrie","Abao","ECE", 'F', "Pulilan, Bulacan");
+
+
+INSERT INTO Subject VALUES
+--Table Names ('SubjectCode' , 'SubjectDescr')
+( 'Chem 123', "Chemistry"),
+( 'Math 122', "Trigonometry"),
+( 'Math 123', "Algebra");
+
+
+INSERT INTO grade (Grade)VALUES 
+-- No need to insert values for ('StudNo', 'SubjectCode' ) because they are foriegn key under the PK
+ (2.00),
+ (1.00),
+ ( 1.50),
+ ( 1.75),
+ (1.25),
+ ( 1.50),
+ (2.00),
+ ( 1.75),
+ (1.25),
+ (1.25),
+ (2.25),
+ ( 2.50),
+ ( 1.00),
+ ( 1.25),
+ (2.50),
+ (1.25),
+ ( 1.50),
+ ( 1.75);
